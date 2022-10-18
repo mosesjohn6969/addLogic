@@ -84,6 +84,12 @@ body {
     
     
   }
+  #termshero {
+    background-image: url('../img/peen.png');
+    background-repeat: repeat;
+    background-size: cover;
+    height:125rem;
+  }
 }
 
 /* Hamburger Menu */

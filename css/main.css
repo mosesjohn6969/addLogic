@@ -4688,12 +4688,6 @@ textarea.form-control.is-invalid {
   margin-left: calc(7rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-x-20 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(5rem * var(--tw-space-x-reverse));
-  margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-y-16 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
@@ -4816,16 +4810,6 @@ textarea.form-control.is-invalid {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -4891,8 +4875,8 @@ textarea.form-control.is-invalid {
   padding: 0.75rem;
 }
 
-.p-20 {
-  padding: 5rem;
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-6 {
@@ -4963,11 +4947,6 @@ textarea.form-control.is-invalid {
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
-}
-
-.px-72 {
-  padding-left: 18rem;
-  padding-right: 18rem;
 }
 
 .pr-2 {
@@ -5258,6 +5237,13 @@ body {
     background-size: cover;
     height:50rem;
   }
+
+  #termshero {
+    background-image: url('../img/peen.png');
+    background-repeat: repeat;
+    background-size: cover;
+    height:125rem;
+  }
 }
 
 /* Hamburger Menu */
@@ -5503,34 +5489,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 480px) {
-    .md\:container {
-      max-width: 480px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .md\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 976px) {
-    .md\:container {
-      max-width: 976px;
-    }
-  }
-
-  @media (min-width: 1540px) {
-    .md\:container {
-      max-width: 1540px;
-    }
-  }
-
   .md\:ml-72 {
     margin-left: 18rem;
   }
@@ -5611,10 +5569,6 @@ body {
     align-items: flex-start;
   }
 
-  .md\:items-center {
-    align-items: center;
-  }
-
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -5655,6 +5609,10 @@ body {
     padding: 2rem;
   }
 
+  .md\:p-20 {
+    padding: 5rem;
+  }
+
   .md\:py-28 {
     padding-top: 7rem;
     padding-bottom: 7rem;
@@ -5680,6 +5638,11 @@ body {
     padding-right: 16rem;
   }
 
+  .md\:px-72 {
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+
   .md\:pt-16 {
     padding-top: 4rem;
   }
@@ -5690,10 +5653,6 @@ body {
 
   .md\:pl-80 {
     padding-left: 20rem;
-  }
-
-  .md\:pt-28 {
-    padding-top: 7rem;
   }
 
   .md\:text-left {
