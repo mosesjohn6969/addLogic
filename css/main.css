@@ -4270,11 +4270,6 @@ textarea.form-control.is-invalid {
   margin-bottom: 4rem;
 }
 
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -4375,10 +4370,6 @@ textarea.form-control.is-invalid {
   margin-top: -3.5rem;
 }
 
-.mr-40 {
-  margin-right: 10rem;
-}
-
 .mb-11 {
   margin-bottom: 2.75rem;
 }
@@ -4445,10 +4436,6 @@ textarea.form-control.is-invalid {
 
 .h-4 {
   height: 1rem;
-}
-
-.h-8 {
-  height: 2rem;
 }
 
 .h-full {
@@ -4701,18 +4688,6 @@ textarea.form-control.is-invalid {
   margin-left: calc(7rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-32 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(8rem * var(--tw-space-x-reverse));
-  margin-left: calc(8rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-x-20 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(5rem * var(--tw-space-x-reverse));
@@ -4723,12 +4698,6 @@ textarea.form-control.is-invalid {
   --tw-space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
-}
-
-.space-x-11 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(2.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .self-end {
@@ -4845,6 +4814,11 @@ textarea.form-control.is-invalid {
 .bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -4986,21 +4960,6 @@ textarea.form-control.is-invalid {
   padding-bottom: 6rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.px-64 {
-  padding-left: 16rem;
-  padding-right: 16rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .px-72 {
   padding-left: 18rem;
   padding-right: 18rem;
@@ -5042,20 +5001,8 @@ textarea.form-control.is-invalid {
   padding-bottom: 2rem;
 }
 
-.pl-80 {
-  padding-left: 20rem;
-}
-
 .pt-28 {
   padding-top: 7rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
-}
-
-.pr-32 {
-  padding-right: 8rem;
 }
 
 .pb-11 {
@@ -5299,6 +5246,13 @@ body {
     background-size: cover;
     height: 53rem;
   }
+
+  #signin {
+    background-image: url('../img/signin.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    height:50rem;
+  }
 }
 
 /* Hamburger Menu */
@@ -5380,11 +5334,6 @@ body {
 .hover\:text-darkGrayishBlue:hover {
   --tw-text-opacity: 1;
   color: hsl(227 12% 61% / var(--tw-text-opacity));
-}
-
-.hover\:text-brightRed:hover {
-  --tw-text-opacity: 1;
-  color: hsl(213 84% 49% / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -5573,8 +5522,8 @@ body {
     margin-left: 4rem;
   }
 
-  .md\:block {
-    display: block;
+  .md\:mb-32 {
+    margin-bottom: 8rem;
   }
 
   .md\:flex {
@@ -5685,12 +5634,21 @@ body {
     padding-bottom: 3rem;
   }
 
+  .md\:px-64 {
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+
   .md\:pt-16 {
     padding-top: 4rem;
   }
 
   .md\:pr-32 {
     padding-right: 8rem;
+  }
+
+  .md\:pl-80 {
+    padding-left: 20rem;
   }
 
   .md\:text-left {
