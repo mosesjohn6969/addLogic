@@ -5581,6 +5581,10 @@ body {
     margin-bottom: 8rem;
   }
 
+  .md\:ml-24 {
+    margin-left: 6rem;
+  }
+
   .md\:flex {
     display: flex;
   }
