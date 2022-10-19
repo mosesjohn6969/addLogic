@@ -4410,6 +4410,10 @@ textarea.form-control.is-invalid {
   margin-right: 14rem;
 }
 
+.ml-72 {
+  margin-left: 18rem;
+}
+
 .block {
   display: block;
 }
