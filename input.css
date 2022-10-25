@@ -32,6 +32,9 @@ body {
   background-size: cover;
   height:85rem;
 }
+#getintouch { 
+  height: 0rem;
+}
 
 #signin {
   background-image: url('../img/signin.jpg');
@@ -51,7 +54,7 @@ body {
 }
 
 #footer {
-  background-image: url('../img/footer.jpg');
+  background-image: url('../img/Rectangle-6.png');
   background-size: cover;
   height: 28.6rem;
   
