@@ -5,26 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
     <title>Add Logic Test</title>
   </head>
   <body>
     <!-- Navbar -->
+    <div class="flex ml-16 mr-10 justify-between items-end pb-2 bg-white">
+      <div class="hidden space-x-12 md:flex">
+        <a href="#" class="hover:text-darkGrayishBlue text-black">Business</a>
+        <a href="#" class="hover:text-darkGrayishBlue text-black">Finance</a>
+        <a href="#" class="hover:text-darkGrayishBlue text-black">Investment</a>
+      </div>
+      <div class="xl:w-96">
+        <div
+          class="input-group relative flex flex-wrap items-stretch w-full mt-7 rounded"
+        >
+          <input
+            type="search"
+            class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border-b-2 border-gblack rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="button-addon2"
+          />
+          <span
+            class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded"
+            id="basic-addon2"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="search"
+              class="w-4"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
     <nav class="relative mx-auto p-2 bg-themeColor">
       <!-- Flex container -->
-      <div class="flex items-center">
+      <div class="flex justify-between md:justify-start items-end">
         <!-- Menu Items -->
         <div class="hidden space-x-12 md:flex">
-          <a href="#" class="hover:text-darkGrayishBlue text-white">Products</a>
-          <a href="#" class="hover:text-darkGrayishBlue text-white"
+          <a href="termsPage.html" class="hover:text-darkGrayishBlue text-white"
+            >Products</a
+          >
+          <a href="termsPage.html" class="hover:text-darkGrayishBlue text-white"
             >Portfolio</a
           >
-          <a href="#" class="hover:text-darkGrayishBlue text-white">Services</a>
-          <a href="#" class="hover:text-darkGrayishBlue text-white">About</a>
+          <a href="termsPage.html" class="hover:text-darkGrayishBlue text-white"
+            >Services</a
+          >
+          <a href="termsPage.html" class="hover:text-darkGrayishBlue text-white"
+            >About</a
+          >
         </div>
 
         <!-- Logo -->
         <div class="pt-2 md:ml-72">
-          <h1 class="text-white font-bold text-2xl">BFSI</h1>
+          <a href="index.html" class="text-white font-bold text-3xl">BFSI</a>
         </div>
 
         <!-- Hamburger Icon -->
@@ -44,10 +114,10 @@
           id="menu"
           class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
         >
-          <a href="#">Products</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Services</a>
-          <a href="#">About</a>
+          <a href="termsPage.html">Products</a>
+          <a href="termsPage.html">Portfolio</a>
+          <a href="termsPage.html">Services</a>
+          <a href="termsPage.html">About</a>
         </div>
       </div>
     </nav>
@@ -58,7 +128,9 @@
         class="container flex pt-44 items-center px-6 mx-auto space-y-0 md:space-y-0 md:flex-row"
       >
         <!-- Left item -->
-        <div class="flex flex-col mb-32 space-y-3 md:w-1/2">
+        <div
+          class="flex flex-col mb-32 md:ml-48 md:items-start items-center space-y-6 md:w-1/2"
+        >
           <h1
             class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
           >
@@ -68,39 +140,46 @@
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>
-          <div class="flex md:justify-star">
+          <div class="flex gap-x-5 md:justify-start">
+            <a href="signin.html">
+
+              <button 
+              
+                class="px-8 text-sm font-semibold py-1 border border-black text-black bg-white rounded-sm hover:bg-themeColor hover:text-white"
+              >
+                Sign up</button
+              >
+            </a>
             <a
-              href="#"
-              class="px-6 text-black bg-white rounded-sm baseline mr-5 hover:bg-brightRedLight"
-              >Sign up</a
-            >
-            <a
-              href="#"
-              class="text-white bg-brightRed px-8 rounded-sm baseline hover:bg-brightRedLight"
+              class="text-white bg-themeColor text-sm font-semibold py-1 px-12 rounded-sm hover:bg-black"
+              href="termsPage.html"
               >Next</a
             >
           </div>
         </div>
-        <!-- Image -->
-        <!-- <div class="md:w-1/2">
-          <img src="img/illustration-intro.svg" alt="" />
-        </div> -->
       </div>
     </section>
 
     <!-- Features Section -->
     <section id="features">
-      <!-- Flex container -->
+      <!-- <div
+        class="container flex  flex-col  mx-auto my-36 space-y-12 md:space-y-0 md:flex-row"
+      > -->
+
       <div
-        class="container flex flex-col px-4 mx-auto my-36 space-y-12 md:space-y-0 md:flex-row"
+        class="container flex flex-col-reverse md:flex-row items-center md:py-28 px-6 mx-auto mt-10 space-y-10 md:space-y-0 md:px-4 md:space-x-44"
       >
         <!-- What's Different -->
-        <div class="flex flex-col space-y-12 md:w-1/2">
-          <img src="img/forex.jpg" class="w-64 h-64 rounded-full" alt="" />
+        <div class="flex flex-col items-end space-y-12 md:w-1/2">
+          <img
+            src="img/forex.jpg"
+            class="md:w-72 md:h-72 w-52 h-52 rounded-full"
+            alt=""
+          />
         </div>
 
         <!-- Numbered List -->
-        <div class="flex flex-col mb-32 space-y-6 md:w-1/2">
+        <div class="flex flex-col space-y-6 md:w-1/2">
           <h1
             class="max-w-md text-4xl font-bold text-center md:text-4xl md:text-left"
           >
@@ -111,22 +190,22 @@
             while keeping the larger team goals in view.
           </p>
 
-          <div class="flex flex-row space-x-14">
+          <div class="md:flex md:flex-row pb-10 md:space-x-14">
             <div class="space-y-2">
-              <div class="flex flex-row items-center">
+              <div class="flex md:flex-row flex-col pt-3 items-center">
                 <img src="img/Command.png" class="w-3.5 h-3 mr-1" alt="" />
 
                 <p class="text-sm">SEO Optimization</p>
               </div>
 
-              <div class="flex flex-row items-center">
+              <div class="flex md:flex-row flex-col pt-3 items-center">
                 <img src="img/Command.png" class="w-3.5 h-3 mr-1" alt="" />
 
                 <p class="text-sm">Awards</p>
               </div>
             </div>
             <div class="space-y-2">
-              <div class="flex flex-row items-center">
+              <div class="flex md:flex-row flex-col pt-3 items-center">
                 <svg
                   class="w-4 mr-1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +225,7 @@
                 <p class="text-sm">Customer experience</p>
               </div>
 
-              <div class="flex flex-row items-center">
+              <div class="flex md:flex-row flex-col pt-3 items-center">
                 <svg
                   class="w-4 mr-1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -174,15 +253,15 @@
     <section id="features" class="mb-28">
       <!-- Flex container -->
       <div
-        class="container flex flex-col px-4 mx-auto mt-28 space-y-12 md:space-y-0 md:flex-row"
+        class="container flex md:pb-18 flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-14 md:space-y-0 md:px-4 md:space-x-44"
       >
         <!-- What's Different -->
-        <div class="flex flex-col space-y-12 md:w-1/2">
-          <img src="img/graph.png" class="w-80 h-64" alt="" />
+        <div class="flex flex-col items-end space-y-12 md:w-1/2">
+          <img src="img/graph.png" class="md:w-80 md:h-64 h-40 w-58" alt="" />
         </div>
 
         <!-- Numbered List -->
-        <div class="flex flex-col mb-32 space-y-6 md:w-1/2">
+        <div class="flex flex-col mb-32 space-y-6 pb-10 md:w-1/2">
           <h1
             class="max-w-md text-4xl font-bold text-center md:text-4xl md:text-left"
           >
@@ -204,7 +283,7 @@
         class="flex flex-col my-20 space-y-12 md:space-y-0 md:flex-row items-center"
       >
         <!-- Numbered List -->
-        <div class="flex ml-28 flex-col space-y-6 mr-10">
+        <div class="flex md:ml-28 flex-col space-y-6 md:mr-10">
           <h1
             class="max-w-md text-sm font-thin text-white text-center md:text-left"
           >
@@ -251,378 +330,607 @@
       </div>
     </section>
 
-    <section id="pen" class="bg-no-repeat bg-center">
+    <!-- <section id="pen" class="bg-no-repeat bg-center">
       <div
         class="container flex pt-44 items-center px-6 mx-auto space-y-0 md:space-y-0 md:flex-row"
       ></div>
+    </section> -->
+
+    <section
+      id="testimonials"
+      class="mb-0 flex items-center text-gray-800 text-center"
+    >
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide relative carousel-dark"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner relative w-full overflow-hidden">
+          <div class="carousel-item active relative float-left w-full">
+            <img
+              class="rounded-full shadow-lg mb-6 mx-auto"
+              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg"
+              alt="avatar"
+              style="width: 150px"
+            />
+            <div class="flex flex-wrap justify-center">
+              <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                <h5 class="text-lg font-bold mb-3">Maria Kate</h5>
+                <p class="font-medium text-gray-700 mb-4">Photographer</p>
+                <p class="text-gray-500 mb-6">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="quote-left"
+                    class="w-6 pr-2 inline-block"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
+                    ></path></svg
+                  >In ac turpis justo. Vivamus auctor quam vitae odio feugiat
+                  pulvinar. Sed semper ligula sed lorem tincidunt dignissim. Nam
+                  sed cursus lectus. Proin non rutrum magna. Proin gravida,
+                  justo et imperdiet tristique, turpis nisi viverra est, nec
+                  posuere ex arcu sit amet erat. Sed a dictum sem. Duis pretium
+                  condimentum nulla.
+                </p>
+                <ul class="flex justify-center mb-0">
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="far"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"
+                      ></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item relative float-left w-full">
+            <img
+              class="rounded-full shadow-lg mb-6 mx-auto"
+              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
+              alt="avatar"
+              style="width: 150px"
+            />
+            <div class="flex flex-wrap justify-center">
+              <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                <h5 class="text-lg font-bold mb-3">John Doe</h5>
+                <p class="font-medium text-gray-700 mb-4">Web Developer</p>
+                <p class="text-gray-500 mb-6">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="quote-left"
+                    class="w-6 pr-2 inline-block"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
+                    ></path>
+                  </svg>
+                  Maecenas auctor, quam eget tincidunt pretium, felis diam
+                  semper turpis, sed scelerisque diam libero facilisis libero.
+                  Quisque vitae semper metus. Aliquam eu dui aliquam, faucibus
+                  metus quis, elementum nunc.
+                </p>
+                <ul class="flex justify-center mb-0">
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star-half-alt"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 536 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z"
+                      ></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item relative float-left w-full">
+            <img
+              class="rounded-full shadow-lg mb-6 mx-auto"
+              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg"
+              alt="avatar"
+              style="width: 150px"
+            />
+            <div class="flex flex-wrap justify-center">
+              <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+                <h5 class="text-lg font-bold mb-3">Anna Deynah</h5>
+                <p class="font-medium text-gray-700 mb-4">UX Designer</p>
+                <p class="text-gray-500 mb-6">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="quote-left"
+                    class="w-6 pr-2 inline-block"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
+                    ></path></svg
+                  >Duis sagittis, turpis in ullamcorper venenatis, ligula nibh
+                  porta dui, sit amet rutrum enim massa in ante. Curabitur in
+                  justo at lorem laoreet ultricies. Nunc ligula felis, sagittis
+                  eget nisi vitae.
+                </p>
+                <ul class="flex justify-center mb-0">
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="star"
+                      class="w-4 text-yellow-500"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                      ></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon inline-block bg-no-repeat"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon inline-block bg-no-repeat"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
 
-    <section id="features" class=" bg-gradient-to-r from-[#ffb357] via-[#FECD92] to-[#ffb357] py-1 items-center flex">
+    <section
+      id="getintouch"
+      class="py-1 items-center flex"
+      style="
+        background: transparent
+          radial-gradient(closest-side at 50% 50%, #fc9a25aa 0%, #ff8b00e0 100%)
+          0% 0% no-repeat padding-box;
+        opacity: 0.75;
+      "
+    >
       <!-- Flex container -->
-      <div class="px-4 mx-auto items-cente">
+      <div class="px-4 mx-auto items-center pb-10">
         <!-- What's Different -->
 
         <!-- Numbered List -->
-        <div class="flex flex-col mb-12 items-center space-y-6 mt-10">
+        <div class="flex flex-col mb-2 items-center space-y-6 mt-10">
           <p class="max-w-md text-sm font-extralight text-black text-center">
             CONTACT
           </p>
-          <h1 class="text-5xl font-bold text-center">Get in touch</h1>
+          <h1 class="md:text-5xl text-2xl font-bold text-center">
+            Get in touch
+          </h1>
 
-          <div class="space-y-8">
+          <div class="space-y-2">
+            <div class="md:space-x-28 space-y-2 md:flex">
+              <input
+                type="text"
+                class="flex pl-3 m-auto pr-12 py-1 rounded-sm focus:outline-none"
+                placeholder="Your name"
+              />
+              <input
+                type="text"
+                class="flex pl-3 m-auto pr-12 py-1 rounded-sm focus:outline-none"
+                placeholder="Your company"
+              />
+            </div>
 
-          
-
-          <div class="space-x-28">
-            <input
-              type="text"
-              class="flex-1 px-8 py-1.5 rounded-sm focus:outline-none"
-              placeholder="Your name"
-            />
-            <input
-              type="text"
-              class="flex-1 px-8 py-1.5 rounded-sm focus:outline-none"
-              placeholder="Your company"
-            />
+            <div class="md:space-x-28 space-y-2 md:flex">
+              <input
+                type="text"
+                class="flex pl-3 m-auto pr-12 py-1 rounded-sm focus:outline-none"
+                placeholder="Your email"
+              />
+              <input
+                type="text"
+                class="flex pl-3 m-auto pr-12 py-1 rounded-sm focus:outline-none"
+                placeholder="Your phone"
+              />
+            </div>
           </div>
-
-          <div class="space-x-28">
-            <input
-              type="text"
-              class="flex-1 px-8 py-1.5 rounded-sm focus:outline-none"
-              placeholder="Your email"
-            />
-            <input
-              type="text"
-              class="flex-1 px-8 py-1.5 rounded-sm focus:outline-none"
-              placeholder="Your phone"
-            />
-          </div>
-        </div>
 
           <a
             href="#"
-            class="text-white mt-24 bg-brightRed px-12 rounded-sm baseline hover:bg-black"
+            class="text-white mt-24 bg-brightRed px-9 rounded-sm baseline hover:bg-black"
             >Next</a
           >
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section
-      id="form"
-      class="bg-white py-14 items-center justify-center self-center"
-    >
-      <!-- Flex container -->
-
+    <!-- Footer -->
+    <footer id="footer" class="bg-veryDarkBlue">
       <div
-        class="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
+        class="flex flex-col-reverse justify-between pb-8 md:pt-16 space-y-12 md:space-y-0 md:flex-row"
       >
-        <form class="space-y-6" action="#">
-          <h5 class="text-xl font-medium text-gray-900 dark:text-white">
-            Sign in to our platform
-          </h5>
-          <div>
-            <label
-              for="email"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Your email</label
-            >
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-              placeholder="name@company.com"
-              required=""
-            />
-          </div>
-          <div>
-            <label
-              for="password"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Your password</label
-            >
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="••••••••"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-              required=""
-            />
-          </div>
-          <div class="flex items-start">
-            <div class="flex items-start">
-              <div class="flex items-center h-5">
-                <input
-                  id="remember"
-                  type="checkbox"
-                  value=""
-                  class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                  required=""
-                />
-              </div>
-              <label
-                for="remember"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >Remember me</label
-              >
-            </div>
-            <a
-              href="#"
-              class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"
-              >Lost Password?</a
-            >
-          </div>
-          <button
-            type="submit"
-            class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Login to your account
-          </button>
-          <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-            Not registered?
-            <a href="#" class="text-blue-700 hover:underline dark:text-blue-500"
-              >Create account</a
-            >
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials">
-      <!-- Container to heading and testm blocks -->
-      <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
-        <!-- Heading -->
-        <h2 class="text-4xl font-bold text-center">
-          What's Different About Manage?
-        </h2>
-        <!-- Testimonials Container -->
-        <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
-          <!-- Testimonial 1 -->
-          <div
-            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
-          >
-            <img src="img/avatar-anisha.png" class="w-16 -mt-14" alt="" />
-            <h5 class="text-lg font-bold">Anisha Li</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              “Manage has supercharged our team’s workflow. The ability to
-              maintain visibility on larger milestones at all times keeps
-              everyone motivated.”
-            </p>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div
-            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
-          >
-            <img src="img/avatar-ali.png" class="w-16 -mt-14" alt="" />
-            <h5 class="text-lg font-bold">Ali Bravo</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              “We have been able to cancel so many other subscriptions since
-              using Manage. There is no more cross-channel confusion and
-              everyone is much more focused.”
-            </p>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div
-            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
-          >
-            <img src="img/avatar-richard.png" class="w-16 -mt-14" alt="" />
-            <h5 class="text-lg font-bold">Richard Watts</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              “Manage has supercharged our team’s workflow. The ability to
-              maintain visibility on larger milestones at all times keeps
-              everyone motivated.”
-            </p>
-          </div>
+        <div class="md:flex md:ml-28 hidden md:flex-col space-y-6 md:mr-10">
+          <h1 class="text-white font-bold md:text-3xl">BFSI</h1>
         </div>
-        <!-- Button -->
-        <div class="my-16">
-          <a
-            href="#"
-            class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-            >Get Started</a
-          >
-        </div>
-      </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section id="cta" class="bg-brightRed">
-      <!-- Flex Container -->
-      <div
-        class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
-      >
-        <!-- Heading -->
-        <h2
-          class="text-5xl font-bold text-center text-white md:text-4xl md:max-w-xl md:text-left"
+        <div
+          class="flex md:flex-row space-y-2 flex-col justify-between m-auto md:space-x-11 md:mr-40"
         >
-          Simplify how your team works today
-        </h2>
-        <!-- Button -->
-        <div>
-          <a
-            href="#"
-            class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
-            >Get Started</a
-          >
-        </div>
-      </div>
-    </section>
-<!-- Footer -->
-<footer id="footer" class="bg-veryDarkBlue">
-  <div
-    class="flex flex-col-reverse justify-between pb-8 md:pt-16 space-y-12 md:space-y-0 md:flex-row"
-  >
-    <div class="md:flex md:ml-28 hidden md:flex-col space-y-6 md:mr-10">
-      <h1 class="text-white font-bold  md:text-3xl">BFSI</h1>
-    </div>
-
-    <div class="flex md:flex-row space-y-2 flex-col justify-between m-auto  md:space-x-11 md:mr-40">
-      <input
-        type="text"
-        class="pl-3 md:pr-32 py-1 rounded-sm focus:outline-none"
-        placeholder="Your email"
-      />
-      <a
-        href="#"
-        class="text-white bg-brightRed px-8 rounded-sm baseline hover:bg-black"
-        >Next</a
-      >
-    </div>
-
-    <!-- <div class="flex flex-col justify-between">
-      <form>
-        <div class="flex space-x-3">
-          <input
-            type="text"
-            class="flex-1 px-4 rounded-full focus:outline-none"
-            placeholder="Updated in your inbox"
-          />
+        <input type="text" class="w-full pl-3 text-sm placeholder:text-sm md:pr-32 py-1 rounded-sm focus:outline-none" placeholder="Your email">
           <button
-            class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none"
+          class="w-full text-white bg-themeColor text-sm font-semibold py-1 px-12 rounded-sm hover:bg-black"
+        >
+          Next
+        </button>
+        </div>
+
+      </div>
+
+
+      
+      <div class="flex flex-col md:py-20 space-y-12 md:space-y-0 md:flex-row">
+        <!-- Numbered List -->
+        <div class="flex md:ml-28 flex-col space-y-6 mr-2">
+          <h1
+            class="max-w-md text-sm font-thin text-white text-center md:text-left"
           >
-            Go
-          </button>
+            About
+          </h1>
+          <p class="max-w-sm text-center text-[#575657] md:text-left">
+            Manage makes it simple for software teams to plan day-to-day tasks
+            for software teams to plan day-to-day tasks while keeping.
+          </p>
         </div>
-      </form>
-    
-    </div> -->
 
-
-  </div>
-  <div class="flex flex-col md:py-20 space-y-12 md:space-y-0 md:flex-row">
-    <!-- Numbered List -->
-    <div class="flex md:ml-28 flex-col space-y-6 mr-2">
-      <h1
-        class="max-w-md text-sm font-thin text-white text-center md:text-left"
-      >
-        About
-      </h1>
-      <p class="max-w-sm text-center text-[#575657] md:text-left">
-        Manage makes it simple for software teams to plan day-to-day tasks
-        for software teams to plan day-to-day tasks while keeping.
-      </p>
-    </div>
-
-    <div class="flex ml-16 flex-col space-y-6 mr-16">
-      <h1
-        class="max-w-md text-sm font-thin text-white text-center md:text-left"
-      >
-        Instagram
-      </h1>
-      <div class="space-y-1.5">
-        <div class="flex flex-row space-x-1.5">
-          <img
-            class="rounded-md h-12 w-14"
-            src="img/img4.png"
-            alt="image description"
-          />
-          <img
-            class="rounded-md h-12 w-14"
-            src="img/img3.png"
-            alt="image description"
-          />
-          <img
-            class="rounded-md h-12 w-14"
-            src="img/img1.png"
-            alt="image description"
-          />
-          <img
-            class="rounded-md h-12 w-14"
-            src="img/img2.png"
-            alt="image description"
-          />
+        <div class="flex ml-16 flex-col space-y-6 mr-16">
+          <h1
+            class="max-w-md text-sm font-thin text-white text-center md:text-left"
+          >
+            Instagram
+          </h1>
+          <div class="space-y-1.5">
+            <div class="flex flex-row space-x-1.5">
+              <img
+                class="rounded-md h-12 w-14"
+                src="img/img4.png"
+                alt="image description"
+              />
+              <img
+                class="rounded-md h-12 w-14"
+                src="img/img3.png"
+                alt="image description"
+              />
+              <img
+                class="rounded-md h-12 w-14"
+                src="img/img1.png"
+                alt="image description"
+              />
+              <img
+                class="rounded-md h-12 w-14"
+                src="img/img2.png"
+                alt="image description"
+              />
+            </div>
+            <div class="flex flex-row space-x-1.5">
+              <img
+                class="rounded-md h-12 w-14"
+                src="img/img1.png"
+                alt="image description"
+              />
+              <img
+                class="rounded-md h-12 w-14"
+                src="img/img2.png"
+                alt="image description"
+              />
+              <img
+                class="rounded-md h-12 w-14"
+                src="img/img3.png"
+                alt="image description"
+              />
+              <img
+                class="rounded-md h-12 w-14"
+                src="img/img4.png"
+                alt="image description"
+              />
+            </div>
+          </div>
         </div>
-        <div class="flex flex-row space-x-1.5">
-          <img
-            class="rounded-md h-12 w-14"
-            src="img/img1.png"
-            alt="image description"
-          />
-          <img
-            class="rounded-md h-12 w-14"
-            src="img/img2.png"
-            alt="image description"
-          />
-          <img
-            class="rounded-md h-12 w-14"
-            src="img/img3.png"
-            alt="image description"
-          />
-          <img
-            class="rounded-md h-12 w-14"
-            src="img/img4.png"
-            alt="image description"
-          />
+
+        <div class="flex md:ml-24 flex-col space-y-6 mr-2">
+          <h1
+            class="max-w-md text-sm font-thin text-white text-center md:text-left"
+          >
+            Latest tweets
+          </h1>
+
+          <div class="flex md:flex-row flex-col items-center">
+            <img src="img/facebook.png" class="h-6 w-6 mr-3" alt="" />
+
+            <p class="max-w-sm text-center text-[#575657] md:text-left">
+              Manage makes it simple for software teams to plan
+            </p>
+          </div>
+
+          <div class="flex md:flex-row flex-col items-center">
+            <img src="img/twitter.png" class="h-6 w-5 mr-4" alt="" />
+
+            <p class="max-w-sm text-center text-[#575657] md:text-left">
+              Manage makes it simple for software teams to plan
+            </p>
+          </div>
+        </div>
+
+        <div class="flex md:ml-16 flex-col space-y-6 mr-2">
+          <h1
+            class="max-w-md text-sm font-thin text-white text-center md:text-left"
+          >
+            Terms of use
+          </h1>
+          <p class="max-w-sm text-center text-[#575657] md:text-left">
+            © Copyright 2019 Laqid All rights reserved
+          </p>
         </div>
       </div>
-    </div>
+    </footer>
 
-    <div class="flex md:backdrop:ml-16 flex-col space-y-6 mr-2">
-      <h1
-        class="max-w-md text-sm font-thin text-white text-center md:text-left"
-      >
-        Latest tweets
-      </h1>
-
-      <div class="flex md:flex-row flex-col items-center">
-        <img src="img/facebook.png" class="h-6 w-6 mr-3" alt="" />
-
-        <p class="max-w-sm text-center text-[#575657] md:text-left">
-          Manage makes it simple for software teams to plan
-        </p>
-      </div>
-
-      <div class="flex md:flex-row flex-col items-center">
-        <img src="img/twitter.png" class="h-6 w-5 mr-4" alt="" />
-
-        <p class="max-w-sm text-center text-[#575657] md:text-left">
-          Manage makes it simple for software teams to plan
-        </p>
-      </div>
-    </div>
-
-    <div class="flex md:ml-16 flex-col space-y-6 mr-2">
-      <h1
-        class="max-w-md text-sm font-thin text-white text-center md:text-left"
-      >
-        Terms of use
-      </h1>
-      <p class="max-w-sm text-center text-[#575657] md:text-left">
-        © Copyright 2019 Laqid All rights reserved
-      </p>
-    </div>
-  </div>
-</footer>
-
-<script src="js/script.js"></script>
-<script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-</body>
+    <script src="js/script.js"></script>
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
 </html>
