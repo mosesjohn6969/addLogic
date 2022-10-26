@@ -27,17 +27,16 @@ body {
 }
 
 #termshero {
-  background-image: url('../img/peen.png');
+  background-image: url('../img/TermsAssets/rupixen-com-pbgYcq3_Zx0-unsplash@2x.png');
   background-repeat: repeat;
   background-size: cover;
-  height:85rem;
 }
 #getintouch { 
   height: 0rem;
 }
 
 #signin {
-  background-image: url('../img/signin.jpg');
+  background-image: url('../img/SigninAssets/rupixen-com-pbgYcq3_Zx0-unsplash@2x.png');
   background-repeat: repeat;
   background-size: cover;
   height:43rem;
@@ -97,7 +96,7 @@ body {
   #hero {
     background-image: url('../img/HomeAssets/Rectangle-5@2x.png');
     background-size: cover;
-    height: 30rem;
+    height: 32rem;
     
     
   }
