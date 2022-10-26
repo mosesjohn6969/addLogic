@@ -4867,6 +4867,11 @@ textarea.form-control.is-invalid {
   padding-right: 5rem;
 }
 
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .pr-2 {
   padding-right: 0.5rem;
 }
@@ -4877,6 +4882,10 @@ textarea.form-control.is-invalid {
 
 .pt-0 {
   padding-top: 0px;
+}
+
+.pt-32 {
+  padding-top: 8rem;
 }
 
 .pb-10 {
@@ -4917,10 +4926,6 @@ textarea.form-control.is-invalid {
 
 .pt-36 {
   padding-top: 9rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
 }
 
 .text-center {
@@ -5166,6 +5171,12 @@ body {
     background-repeat: repeat;
     background-size: cover;
     height:130rem;
+  }
+
+  #hero {
+    background-image: url('../img/HomeAssets/Rectangle-5@2x.png');
+    background-size: cover;
+    height: 30rem;
   }
 }
 

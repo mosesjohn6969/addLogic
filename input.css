@@ -93,6 +93,14 @@ body {
     background-size: cover;
     height:130rem;
   }
+
+  #hero {
+    background-image: url('../img/HomeAssets/Rectangle-5@2x.png');
+    background-size: cover;
+    height: 30rem;
+    
+    
+  }
 }
 
 /* Hamburger Menu */
