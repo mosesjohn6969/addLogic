@@ -45,7 +45,7 @@ body {
 }
 
 #testimonials {
-  background-image: url('../img/pen.png');
+  background-image: url('../img/HomeAssets/Rectangle.png');
   background-size: cover;
   height: 43rem;
   
@@ -53,7 +53,7 @@ body {
 }
 
 #footer {
-  background-image: url('../img/Rectangle-6.png');
+  background-image: url('../img/HomeAssets/Rectangle-6@2x.png');
   background-size: cover;
   height: 28.6rem;
   
@@ -71,7 +71,7 @@ body {
   }
 
   #footer {
-    background-image: url('../img/footer.jpg');
+    background-image: url('../img/HomeAssets/Rectangle-6@2x.png');
     background-size: cover;
     height: 60rem;
     
@@ -79,7 +79,7 @@ body {
   }
 
   #signin {
-    background-image: url('../img/signin.jpg');
+    background-image: url('../img/SigninAssets/rupixen-com-pbgYcq3_Zx0-unsplash@2x.png');
     background-repeat: repeat;
     background-size: cover;
     height:43rem;
@@ -87,7 +87,7 @@ body {
     
   }
   #termshero {
-    background-image: url('../img/peen.png');
+    background-image: url('../img/TermsAssets/rupixen-com-pbgYcq3_Zx0-unsplash@2x.png');
     background-repeat: repeat;
     background-size: cover;
     height:130rem;

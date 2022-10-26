@@ -4325,6 +4325,10 @@ textarea.form-control.is-invalid {
   margin-bottom: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -4355,10 +4359,6 @@ textarea.form-control.is-invalid {
 
 .mb-11 {
   margin-bottom: 2.75rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .block {
@@ -4393,10 +4393,6 @@ textarea.form-control.is-invalid {
   height: 0.75rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-40 {
   height: 10rem;
 }
@@ -4407,6 +4403,10 @@ textarea.form-control.is-invalid {
 
 .h-12 {
   height: 3rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-5 {
@@ -4495,10 +4495,6 @@ textarea.form-control.is-invalid {
 
 .resize {
   resize: both;
-}
-
-.list-disc {
-  list-style-type: disc;
 }
 
 .flex-row {
@@ -4612,10 +4608,16 @@ textarea.form-control.is-invalid {
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
@@ -4646,12 +4648,6 @@ textarea.form-control.is-invalid {
   --tw-space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
-}
-
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .self-end {
@@ -5147,13 +5143,13 @@ body {
 }
 
 #testimonials {
-  background-image: url('../img/pen.png');
+  background-image: url('../img/HomeAssets/Rectangle.png');
   background-size: cover;
   height: 43rem;
 }
 
 #footer {
-  background-image: url('../img/Rectangle-6.png');
+  background-image: url('../img/HomeAssets/Rectangle-6@2x.png');
   background-size: cover;
   height: 28.6rem;
 }
@@ -5169,20 +5165,20 @@ body {
   }
 
   #footer {
-    background-image: url('../img/footer.jpg');
+    background-image: url('../img/HomeAssets/Rectangle-6@2x.png');
     background-size: cover;
     height: 60rem;
   }
 
   #signin {
-    background-image: url('../img/signin.jpg');
+    background-image: url('../img/SigninAssets/rupixen-com-pbgYcq3_Zx0-unsplash@2x.png');
     background-repeat: repeat;
     background-size: cover;
     height:43rem;
   }
 
   #termshero {
-    background-image: url('../img/peen.png');
+    background-image: url('../img/TermsAssets/rupixen-com-pbgYcq3_Zx0-unsplash@2x.png');
     background-repeat: repeat;
     background-size: cover;
     height:130rem;
@@ -5241,14 +5237,6 @@ body {
 
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
-}
-
-.marker\:text-black *::marker {
-  color: rgb(0 0 0 );
-}
-
-.marker\:text-black::marker {
-  color: rgb(0 0 0 );
 }
 
 .placeholder\:text-sm::-moz-placeholder {
