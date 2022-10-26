@@ -4940,6 +4940,10 @@ textarea.form-control.is-invalid {
   padding-top: 9rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -5181,7 +5185,7 @@ body {
     background-image: url('../img/TermsAssets/rupixen-com-pbgYcq3_Zx0-unsplash@2x.png');
     background-repeat: repeat;
     background-size: cover;
-    height:130rem;
+    height:150rem;
   }
 
   #hero {
@@ -5573,6 +5577,10 @@ body {
 
   .md\:pt-20 {
     padding-top: 5rem;
+  }
+
+  .md\:pt-36 {
+    padding-top: 9rem;
   }
 
   .md\:text-left {
