@@ -4754,6 +4754,11 @@ textarea.form-control.is-invalid {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -5157,7 +5162,7 @@ body {
 #footer {
   background-image: url('../img/HomeAssets/Rectangle-6@2x.png');
   background-size: cover;
-  height: 28.6rem;
+  height: 31rem;
 }
 
 @media (max-width: 576px) {
